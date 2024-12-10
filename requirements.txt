@@ -1,4 +1,4 @@
 playwright==1.33.0
-telegram==13.15
+python-telegram-bot==20.1
 beautifulsoup4==4.11.2
 asyncio==3.4.3
