@@ -1,5 +1,4 @@
-playwright
+asyncio
 beautifulsoup4
-selenium
-telegram
+playwright
 python-telegram-bot
