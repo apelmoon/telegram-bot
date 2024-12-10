@@ -1,4 +1,5 @@
 playwright
-telegram
 beautifulsoup4
-python-telegram-bot==20.3
+selenium
+telegram
+python-telegram-bot
