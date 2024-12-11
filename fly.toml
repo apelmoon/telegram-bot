@@ -1,0 +1,17 @@
+app = "VintedBott"  # Замените на имя вашего приложения
+
+[processes]
+bot = "telegram_bot.py"  # Укажите имя вашего Python-файла
+
+[env]
+TOKEN = "8182332127:AAGql7P1lkZb_Z1pNo0KVp__5734D2RcktU"
+CHAT_IDS = "421061159,651133671"  # ID чатов через запятую
+PYTHONUNBUFFERED = "1"  # Для немедленного вывода логов
+
+# Удаляем/комментируем HTTP-сервисы, т.к. они не нужны для бота
+# [services]
+# internal_port = 8080
+# protocol = "tcp"
+# [[services.ports]]
+#   handlers = ["http"]
+#   port = 80
