@@ -1,17 +1,27 @@
-app = "vintedbot"  # Замените на имя вашего приложения
+# fly.toml app configuration file generated for vintedbot on 2024-12-11T13:33:55Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-[processes]
-bot = "python telegrambot.py"  # Укажите имя вашего Python-файла
+app = 'vintedbot'
+primary_region = 'waw'
+
+[build]
+  builder = 'paketobuildpacks/builder:base'
 
 [env]
-TOKEN = "8182332127:AAGql7P1lkZb_Z1pNo0KVp__5734D2RcktU"
-CHAT_IDS = "421061159,651133671"  # ID чатов через запятую
-PYTHONUNBUFFERED = "1"  # Для немедленного вывода логов
+  PORT = '8080'
 
-# Удаляем/комментируем HTTP-сервисы, т.к. они не нужны для бота
-# [services]
-# internal_port = 8080
-# protocol = "tcp"
-# [[services.ports]]
-#   handlers = ["http"]
-#   port = 80
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024
