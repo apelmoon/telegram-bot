@@ -33,7 +33,7 @@ async def check_vinted():
         
         while True:
             try:
-                await page.goto(url)
+                await page.goto(url, timeout=60000)
                 await page.wait_for_timeout(3000)  # Ожидание 3 секунды для загрузки страницы
 
                 # Получаем HTML-код страницы
