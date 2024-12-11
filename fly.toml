@@ -1,7 +1,7 @@
-app = "VintedBott"  # Замените на имя вашего приложения
+app = "vintedbot"  # Замените на имя вашего приложения
 
 [processes]
-bot = "python telegram_bot.py"  # Укажите имя вашего Python-файла
+bot = "python telegrambot.py"  # Укажите имя вашего Python-файла
 
 [env]
 TOKEN = "8182332127:AAGql7P1lkZb_Z1pNo0KVp__5734D2RcktU"
